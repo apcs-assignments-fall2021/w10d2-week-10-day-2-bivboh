@@ -7,14 +7,22 @@ public class NumberSequence {
     // e.g. new NumberSequence(5, 10) should create a NumberSequence whose
     // array arr contains: [5, 6, 7, 8, 9, 10, 11, 12, 13, 14]
     public NumberSequence(int start, int size) {
-        // YOUR CODE HERE
+        arr = new int[size];
+        arr[0] = start;
+        for (int i = 1; i < size; i++){
+            start ++;
+            arr[i] = start;
+        }
     }
 
     // Returns the sum of the numbers from index start up to but not
     // including end
     public int sumPart(int start, int end) {
-        // YOUR CODE HERE
-        return -1;
+        int x = 0;
+        for (int i = start; i < end; i++){
+            x += arr[i];
+        }
+        return x;
     }
 
 
